@@ -1,0 +1,94 @@
+/**
+ * Forum One reveal.js theme
+ * --Started from the Solarized theme.
+ */
+
+
+// Default mixins and settings -----------------
+@import "../template/mixins";
+@import "../template/settings";
+// ---------------------------------------------
+
+
+html * {
+	color-profile: sRGB;
+	rendering-intent: auto;
+}
+
+// Solarized colors
+$base03:    #555559;
+$base02:    #ef4836;//F1
+$base01:    #ef4836;//F1
+$base00:    #555559;
+$base0:     #839496;
+$base1:     #93a1a1;
+$base2:     #eee8d5;
+$base3:     #fdf6e3;//white
+$yellow:    #b58900;
+$orange:    #cb4b16;
+$red:       #ef4836;//F1
+$magenta:   #d33682;
+$violet:    #6c71c4;
+$blue:      #7CCFD9;//F1
+$cyan:      #2aa198;
+$green:     #859900;
+
+// Fonts
+$mainFont: "Metric", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$headingFont: "Metric", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+.reveal section.title-slide, .reveal section.subsection-divider {
+  h1, h2, h3, h4, p, a  {
+    color: $base3
+  }
+}
+
+.reveal section.blockquote {
+  h1, h2, h3, h4, p, a  {
+    color: $blue
+  }
+  p.quote {
+    font-size:2em;
+
+  }
+  // Is this a bit too presumptive?
+  p.quote::before{
+    content:'"';
+  }
+  p.quote::after{
+    content:'"';
+  }
+  p.blockquote-name {
+    text-align:right;
+  }
+  p.blockquote-title {
+    text-align:right;
+  }
+}
+
+.reveal section.full-bleed {
+  div.full-bleed-content {
+    border: 5px solid $base3;
+    background-color: $red;
+    h1,h2,h3,h4,p {
+      color: $base3;
+    }
+    bottom:1px;
+    right:1px;
+  }
+}
+
+// Override theme settings (see ../template/settings.scss)
+$mainColor: $base00;
+$headingColor: $base01;
+$headingTextShadow: none;
+$backgroundColor: $base3;
+$linkColor: $blue;
+$linkColorHover: lighten( $linkColor, 20% );
+$selectionBackgroundColor: $blue;
+
+
+
+// Theme template ------------------------------
+@import "../template/theme";
+// ---------------------------------------------
