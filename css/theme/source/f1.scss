@@ -49,7 +49,7 @@ $headingFont: "Metric", "Helvetica Neue", Helvetica, Arial, sans-serif;
   }
   p.quote {
     font-size:2em;
-
+    font-style: italic;
   }
   // Is this a bit too presumptive?
   p.quote::before{
@@ -68,15 +68,17 @@ $headingFont: "Metric", "Helvetica Neue", Helvetica, Arial, sans-serif;
 
 .reveal section.full-bleed {
   div.full-bleed-content {
-    border: 5px solid $base3;
+    border: 3px solid $base3;
     background-color: $red;
     h1,h2,h3,h4,p {
       color: $base3;
     }
-    bottom:1px;
-    right:1px;
+    position:relative;
+    top:250px;
+    left:250px;
   }
 }
+
 
 // Override theme settings (see ../template/settings.scss)
 $mainColor: $base00;

@@ -12,7 +12,8 @@ html * {
 .reveal section.blockquote h1, .reveal section.blockquote h2, .reveal section.blockquote h3, .reveal section.blockquote h4, .reveal section.blockquote p, .reveal section.blockquote a {
   color: #7CCFD9; }
 .reveal section.blockquote p.quote {
-  font-size: 2em; }
+  font-size: 2em;
+  font-style: italic; }
 .reveal section.blockquote p.quote::before {
   content: '"'; }
 .reveal section.blockquote p.quote::after {
@@ -23,10 +24,11 @@ html * {
   text-align: right; }
 
 .reveal section.full-bleed div.full-bleed-content {
-  border: 5px solid #fdf6e3;
+  border: 3px solid #fdf6e3;
   background-color: #ef4836;
-  bottom: 1px;
-  right: 1px; }
+  position: relative;
+  top: 250px;
+  left: 250px; }
   .reveal section.full-bleed div.full-bleed-content h1, .reveal section.full-bleed div.full-bleed-content h2, .reveal section.full-bleed div.full-bleed-content h3, .reveal section.full-bleed div.full-bleed-content h4, .reveal section.full-bleed div.full-bleed-content p {
     color: #fdf6e3; }
 
