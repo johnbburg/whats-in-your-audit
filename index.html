@@ -4,12 +4,14 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>Forum One</title>
+		<title>What's in your Audit</title>
 
-		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
-		<meta name="author" content="Hakim El Hattab">
+		<meta name="description" content="A guide to auditing Drupal sites">
+		<meta name="author" content="John Brandenburg">
+        <link href="/images/favicon.png" rel="shortcut icon">
 
-		<meta name="apple-mobile-web-app-capable" content="yes" />
+
+        <meta name="apple-mobile-web-app-capable" content="yes" />
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -41,371 +43,483 @@
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
 				<section class="title-slide" data-background="#ef4836">
-					<h1>Title (Preferred)</h1>
-					<h3>This is the subtitle, my friends.</h3>
+					<h1>What's in your Audit?</h1>
+					<h3>A Guide to Auditing Drupal websites.</h3>
 					<p>
-						<small>Month DD, YYYY</small>
+						<small>July 21, 2015, Drupal GovCon</small>
 
 					</p>
                     <p>
-                        <small>Other useful information</small>
+                        <small>@johnbburg, #whatsinyouraudit</small>
                     </p>
+
+                    <aside class="notes">
+                        <p>intro.</p>
+                        <p>twitter.</p>
+                        <p>inclusive to all skill levels. some tech speak.</p>
+                        <p>Apply this to building sites as well.</p>
+                        <p>Not focused on D8, but ideas can apply.</p>
+                        <p>So who am I?</p>
+                    </aside>
+
 				</section>
 
-                <section class="subsection-divider" data-background="#7CCFD9">
-                    <h1>Subsection Divider</h1>
-                </section>
-
-
                 <section class="introduction">
-                    <h2>Nice to Meet You!</h2>
-                    <img src="http://0.0.0.0:8000/images/JIm-Cashel-180x180.jpg">
-                    <img src="http://0.0.0.0:8000/images/JIm-Cashel-180x180.jpg">
-                    <img src="http://0.0.0.0:8000/images/JIm-Cashel-180x180.jpg">
-                    <img src="http://0.0.0.0:8000/images/JIm-Cashel-180x180.jpg">
+                    <h3>Nice to Meet You!</h3>
+                    <img src="images/featured-tweet.png">
+                    <p>John Brandenburg, Senior Developer, Forum One</p>
+                    <aside class="notes">you may remember me from such Drupal Association Newsletter Featured Tweets, as last week's
+                        <p>Promote DA</p>
+                    </aside>
                 </section>
 
-                <section class="blockquote">
-                    <p class="quote">Big callout quote. Make it short and sweet</p>
-                    <p class="blockquote-name"><strong>Source's Name</strong></p>
-                    <p class="blockquote-title"><small>Source's title</small></p>
+                <section class="full-bleed" data-background="images/johnsnow.png">
+                    <aside class="notes">
+                        <p>...And I'm on the support team.</p>
+                        <p>I've seen a lot of different Drupal sites and different approaches.</p>
+                        <p>Occasionally, I am asked to conduct an audit prior to taking over support.</p>
+                    </aside>
                 </section>
 
-                <section class="full-bleed" data-background="http://0.0.0.0:8000/images/Gorongosa-elephants.jpg">
-                    <div class="full-bleed-content">
-                        <h2>Full Bleed!!!</h2>
-                        <p>Something something dark side.</p>
-                    </div>
+
+                <section>
+                    <section class="subsection-divider" data-background="#7CCFD9">
+                        <h1>Why Audit?</h1>
+                    </section>
+
+                    <section>
+                        <h1>Catalog Technical Debt</h1>
+                        <p>Coined by Ward Cunningham</p>
+                        <aside class="notes">
+                        </aside>
+
+                    </section>
+
+                    <section class="introduction">
+                        <iframe width="640" height="480" src="https://www.youtube.com/embed/pqeJFYwnkjE" frameborder="0" allowfullscreen></iframe>
+                        <p><a href="http://c2.com/cgi/wiki?WardExplainsDebtMetaphor">http://c2.com/cgi/wiki?WardExplainsDebtMetaphor</a></p>
+                        <p><a href="http://c2.com/doc/oopsla92.html">http://c2.com/doc/oopsla92.html</a></p>
+                        <aside class="notes">
+                        </aside>
+                    </section>
+
+                    <section>
+                        <img src="images/tech-debt.jpg" />
+                        <p><a href="http://blog.ifsworld.com/2012/03/no-thanks-im-too-busy-to-listen-to-you/">ifsworld.com</a></p>
+                        <aside class="notes">
+                            <ul>
+                            <li>We get caught up in work and don't pay down the debt.</li>
+                            <li>Often don't have the vision that we are in debt.</li>
+                            <li>Hard convince a product owner.</li>
+                            <li>Auditing the the first place is the right step.</li>
+                            </ul>
+                        </aside>
+                    </section>
+
+                    <section>
+                        <img src="images/the_general_problem.png" />
+                        <p><a href="http://xkcd.com/974/">xkcd</a></p>
+                        <p><a href="http://idlewords.com/talks/web_design_first_100_years.htm">We don't need to "Fix the world with software."</a></p>
+                        <aside class="notes">
+                            <p>On the flip side. carried away</p>
+                            <p>"good enough"</p>
+                        </aside>
+                    </section>
+
                 </section>
 
                 <section>
-					<h2>Hello There</h2>
-					<p>
-						reveal.js enables you to create beautiful interactive slide decks using HTML. This presentation will show you examples of what it can do.
-					</p>
-				</section>
+                    <h2> Didn't want to just Go through a list of best practices.</h2>
+                </section>
 
-				<!-- Example of nested vertical slides -->
-				<section>
-					<section>
-						<h2>Vertical Slides</h2>
-						<p>Slides can be nested inside of each other.</p>
-						<p>Use the <em>Space</em> key to navigate through all slides.</p>
-						<br>
-						<a href="#" class="navigate-down">
-							<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
-						</a>
-					</section>
-					<section>
-						<h2>Basement Level 1</h2>
-						<p>Nested slides are useful for adding additional detail underneath a high level horizontal slide.</p>
-					</section>
-					<section>
-						<h2>Basement Level 2</h2>
-						<p>That's it, time to go back up.</p>
-						<br>
-						<a href="#/2">
-							<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Up arrow" style="transform: rotate(180deg); -webkit-transform: rotate(180deg);">
-						</a>
-					</section>
-				</section>
+                <section>
+                    <h1> But here it is.</h1>
+                    <aside class="notes">
+                        A few warnings:
+                        <ul>
+                            <li>Subject to opinion.</li>
+                            <li>Your mileage may vary</li>
+                            <li>What I learned in my career in Drupal</li>
+                            <li>Let's talk afterwards: twitter.</li>
+                        </ul>
+                    </aside>
+                </section>
 
-				<section>
-					<h2>Slides</h2>
-					<p>
-						Not a coder? Not a problem. There's a fully-featured visual editor for authoring these, try it out at <a href="http://slides.com" target="_blank">http://slides.com</a>.
-					</p>
-				</section>
 
-				<section>
-					<h2>Point of View</h2>
-					<p>
-						Press <strong>ESC</strong> to enter the slide overview.
-					</p>
-					<p>
-						Hold down alt and click on any element to zoom in on it using <a href="http://lab.hakim.se/zoom-js">zoom.js</a>. Alt + click anywhere to zoom back out.
-					</p>
-				</section>
+                <section>
+                    <section class="subsection-divider" data-background="#7CCFD9">
+                        <a href="https://docs.google.com/spreadsheets/d/14RsCyyhmdzIUOb7EiWOiknuyNM_7lMRg52nWkFM9qPo/edit">
+                            <h2>The Checklist</h2>
+                            <img src="images/checklist-preview.png" />
+                        </a>
+                        <aside class="notes">
+                            I'll be tweeting links.
+                        </aside>
+                    </section>
 
-				<section>
-					<h2>Touch Optimized</h2>
-					<p>
-						Presentations look great on touch devices, like mobile phones and tablets. Simply swipe through your slides.
-					</p>
-				</section>
+                    <section>
+                        <h3>How to use this document.</h3>
+                        <ul>
+                            <li>Assess: Build a mental model.</li>
+                            <li>Action: Make a recommendation.</li>
+                            <li>Estimate: Cost to fix.</li>
+                        </ul>
+                        <aside class="notes">
+                            <ul>
+                                <li>Often the action is just to document something.</li>
+                                <li>Remember that estimates are just estimates.</li>
+                            </ul>
+                        </aside>
+                    </section>
 
-				<section data-markdown>
-					<script type="text/template">
-						## Markdown support
+                    <section>
+                        <h2>What you will need</h2>
+                        <ul>
+                            <li>Access to code</li>
+                            <li>Copy of database</li>
+                            <li>Admin accounts</li>
+                            <li>Shell/remote access to production/staging environment</li>
+                        </ul>
 
-						Write content using inline or external Markdown.
-						Instructions and more info available in the [readme](https://github.com/hakimel/reveal.js#markdown).
+                        <p>Stand up a copy of the site.</p>
+                        <p>Review status of site on host. Reports > Status Report</p>
+                        <aside class="notes">
+                            <p>Can be done without admin access, but will be incomplete.</p>
+                        </aside>
+                    </section>
 
-						```
-						<section data-markdown>
-						  ## Markdown support
+                </section>
 
-						  Write content using inline or external Markdown.
-						  Instructions and more info available in the [readme](https://github.com/hakimel/reveal.js#markdown).
-						</section>
-						```
-					</script>
-				</section>
 
-				<section>
-					<section id="fragments">
-						<h2>Fragments</h2>
-						<p>Hit the next arrow...</p>
-						<p class="fragment">... to step through ...</p>
-						<p><span class="fragment">... a</span> <span class="fragment">fragmented</span> <span class="fragment">slide.</span></p>
+                <section>
 
-						<aside class="notes">
-							This slide has fragments which are also stepped through in the notes window.
-						</aside>
-					</section>
-					<section>
-						<h2>Fragment Styles</h2>
-						<p>There's different types of fragments, like:</p>
-						<p class="fragment grow">grow</p>
-						<p class="fragment shrink">shrink</p>
-						<p class="fragment fade-out">fade-out</p>
-						<p class="fragment current-visible">current-visible</p>
-						<p class="fragment highlight-red">highlight-red</p>
-						<p class="fragment highlight-blue">highlight-blue</p>
-					</section>
-				</section>
+                    <section class="subsection-divider" data-background="#7CCFD9">
+                        <h2>General Best Practices</h2>
+                    </section>
 
-				<section id="transitions">
-					<h2>Transition Styles</h2>
-					<p>
-						You can select from different transitions, like: <br>
-						<a href="?transition=none#/transitions">None</a> -
-						<a href="?transition=fade#/transitions">Fade</a> -
-						<a href="?transition=slide#/transitions">Slide</a> -
-						<a href="?transition=convex#/transitions">Convex</a> -
-						<a href="?transition=concave#/transitions">Concave</a> -
-						<a href="?transition=zoom#/transitions">Zoom</a>
-					</p>
-				</section>
 
-				<section id="themes">
-					<h2>Themes</h2>
-					<p>
-						reveal.js comes with a few themes built in: <br>
-						<!-- Hacks to swap themes after the page has loaded. Not flexible and only intended for the reveal.js demo deck. -->
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/black.css'); return false;">Black (default)</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/white.css'); return false;">White</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/league.css'); return false;">League</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/sky.css'); return false;">Sky</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/beige.css'); return false;">Beige</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/simple.css'); return false;">Simple</a> <br>
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/serif.css'); return false;">Serif</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/blood.css'); return false;">Blood</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/night.css'); return false;">Night</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/moon.css'); return false;">Moon</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/solarized.css'); return false;">Solarized</a>
-					</p>
-				</section>
+                    <section>
+                        <h2>Quick Checks</h2>
+                        <p>Prod Check <a href="https://www.drupal.org/project/prod_check">https://www.drupal.org/project/prod_check</a> </p>
+                        <p>(admin ui that expands on status report)</p>
+                        <p>Site Audit: <a href="https://www.drupal.org/project/site_audit">https://www.drupal.org/project/site_audit</a> </p>
+                        <p>(drush commands generate reports)</p>
+                        <aside class="notes">
+                            Show other tabs.
+                        </aside>
+                    </section>
 
-				<section>
-					<section data-background="#dddddd">
-						<h2>Slide Backgrounds</h2>
-						<p>
-							Set <code>data-background="#dddddd"</code> on a slide to change the background color. All CSS color formats are supported.
-						</p>
-						<a href="#" class="navigate-down">
-							<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
-						</a>
-					</section>
-					<section data-background="https://s3.amazonaws.com/hakim-static/reveal-js/image-placeholder.png">
-						<h2>Image Backgrounds</h2>
-						<pre><code>&lt;section data-background="image.png"&gt;</code></pre>
-					</section>
-					<section data-background="https://s3.amazonaws.com/hakim-static/reveal-js/image-placeholder.png" data-background-repeat="repeat" data-background-size="100px">
-						<h2>Tiled Backgrounds</h2>
-						<pre><code style="word-wrap: break-word;">&lt;section data-background="image.png" data-background-repeat="repeat" data-background-size="100px"&gt;</code></pre>
-					</section>
-					<section data-background-video="https://s3.amazonaws.com/static.slid.es/site/homepage/v1/homepage-video-editor.mp4,https://s3.amazonaws.com/static.slid.es/site/homepage/v1/homepage-video-editor.webm" data-background-color="#000000">
-						<div style="background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px;">
-							<h2>Video Backgrounds</h2>
-							<pre><code style="word-wrap: break-word;">&lt;section data-background-video="video.mp4,video.webm"&gt;</code></pre>
-						</div>
-					</section>
-					<section data-background="http://i.giphy.com/90F8aUepslB84.gif">
-						<h2>... and GIFs!</h2>
-					</section>
-				</section>
+                    <section>
+                        <h1>Hacked!</h1>
+                        <p>
+                            The Drupal Patching Ecosystem
+                        </p>
+                        <img src="images/hacked.drupal.png"/>
+                        <aside class="notes">
+                            <p>Patching modules is extremely common.</p>
+                            <p>Secure Pages requires a patch to core.</p>
+                            <p>A patched module is harder to update.</p>
+                        </aside>
 
-				<section data-transition="slide" data-background="#4d7e65" data-background-transition="zoom">
-					<h2>Background Transitions</h2>
-					<p>
-						Different background transitions are available via the backgroundTransition option. This one's called "zoom".
-					</p>
-					<pre><code>Reveal.configure({ backgroundTransition: 'zoom' })</code></pre>
-				</section>
+                    </section>
 
-				<section data-transition="slide" data-background="#b5533c" data-background-transition="zoom">
-					<h2>Background Transitions</h2>
-					<p>
-						You can override background transitions per-slide.
-					</p>
-					<pre><code style="word-wrap: break-word;">&lt;section data-background-transition="zoom"&gt;</code></pre>
-				</section>
+                    <section>
+                        <h2>There is a process</h2>
+                        <p>
+                            The point is to document these modifications. And share!
+                        </p>
+                        <pre>
+drupalroot/
+patches/
+  project/[project]-[description]-[issue]-[comment]-[core-version].patch
+                        </pre>
+                        <p><a href="https://www.drupal.org/patch/submit">https://www.drupal.org/patch/submit</a></p>
+                        <p>And there should be an issue filed in the project's queue. Even if it just supports your use case!</p>
+                    </section>
 
-				<section>
-					<h2>Pretty Code</h2>
-					<pre><code data-trim contenteditable>
-function linkify( selector ) {
-  if( supports3DTransforms ) {
+                    <section>
+                        <p>
+                            Any custom code follows Drupal coding standards (<a href="https://www.drupal.org/coding-standards">https://www.drupal.org/coding-standards</a>).
 
-    var nodes = document.querySelectorAll( selector );
+                        </p>
+                        <p>
+                            You don't need to memorize these! <a href="https://www.drupal.org/project/coder">https://www.drupal.org/project/coder</a>
+                        </p>
+                    </section>
 
-    for( var i = 0, len = nodes.length; i &lt; len; i++ ) {
-      var node = nodes[i];
+                    <section>
+                        <h1>
+                            Use the API
+                        </h1>
+                        Views Example:
+                            <pre><code data-trim class="php">
 
-      if( !node.className ) {
-        node.className += ' roll';
-      }
-    }
-  }
+$view->display['default']->handler->options['filters']['changed']['value'] = '2025-04-30 00:00:00';
+
+                            </code></pre>
+
+                        <p>Vs.</p>
+
+
+                            <pre><code data-trim class="php">
+$filters = array();
+$filters['changed'] = '2025-04-30 00:00:00';
+
+$view->set_exposed_input($filters);
+                            </code></pre>
+                    </section>
+                    <section>
+                        <h2>Documentation</h2>
+                        <p>
+                            It exists, is correct, and ideally, focuses on the <strong>why</strong>, over the how.
+                        </p>
+                        <pre><code data-trim class="js">
+// When the number of items exceeds the visible items,
+// resetting the width will collapse the size to
+// the viewport width and cause all items be in view.
+if ( numItems >= visibleItems ) {
+    return;
 }
-					</code></pre>
-					<p>Code syntax highlighting courtesy of <a href="http://softwaremaniacs.org/soft/highlight/en/description/">highlight.js</a>.</p>
-				</section>
+                        </code></pre>
+                    </section>
 
-				<section>
-					<h2>Marvelous List</h2>
-					<ul>
-						<li>No order here</li>
-						<li>Or here</li>
-						<li>Or here</li>
-						<li>Or here</li>
-					</ul>
-				</section>
+                    <section>
+                        <h2>Other tidbits</h2>
+                        <ul>
+                            <li>Use of $_SESSION for anon users.</li>
+                            <li>Heavy use of includes (dozens).</li>
+                            <li>Is version control in use?</li>
+                            <li>Location of webroot in VCS (exception: Pantheon)</li>
+                        </ul>
+                        <aside class="notes">
+                            This is the random of the random.
+                        </aside>
 
-				<section>
-					<h2>Fantastic Ordered List</h2>
-					<ol>
-						<li>One is smaller than...</li>
-						<li>Two is smaller than...</li>
-						<li>Three!</li>
-					</ol>
-				</section>
+                    </section>
 
-				<section>
-					<h2>Tabular Tables</h2>
-					<table>
-						<thead>
-							<tr>
-								<th>Item</th>
-								<th>Value</th>
-								<th>Quantity</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td>Apples</td>
-								<td>$1</td>
-								<td>7</td>
-							<tr>
-							<tr>
-								<td>Lemonade</td>
-								<td>$2</td>
-								<td>18</td>
-							<tr>
-							<tr>
-								<td>Bread</td>
-								<td>$3</td>
-								<td>2</td>
-							<tr>
-						</tbody>
-					</table>
-				</section>
+                </section>
 
-				<section>
-					<h2>Clever Quotes</h2>
-					<p>
-						These guys come in two forms, inline: <q cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
-						&ldquo;The nice thing about standards is that there are so many to choose from&rdquo;</q> and block:
-					</p>
-					<blockquote cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
-						&ldquo;For years there has been a theory that millions of monkeys typing at random on millions of typewriters would
-						reproduce the entire works of Shakespeare. The Internet has proven this theory to be untrue.&rdquo;
-					</blockquote>
-				</section>
 
-				<section>
-					<h2>Intergalactic Interconnections</h2>
-					<p>
-						You can link between slides internally,
-						<a href="#/2/3">like this</a>.
-					</p>
-				</section>
+                <section>
+                    <section  class="subsection-divider" data-background="#7CCFD9">
+                        <h1>Modules</h1>
+                    </section>
+                    <section>
+                        Update status
+                    </section>
+                    <section>
+                        Maintenance status
+                    </section>
+                    <section>
+                        Release version
+                        <aside class="notes">You have my sympathies of you used an unstable release of media - just went into beta the other week.</aside>
+                    </section>
+                </section>
 
-				<section>
-					<h2>Speaker View</h2>
-					<p>There's a <a href="https://github.com/hakimel/reveal.js#speaker-notes">speaker view</a>. It includes a timer, preview of the upcoming slide as well as your speaker notes.</p>
-					<p>Press the <em>S</em> key to try it out.</p>
 
-					<aside class="notes">
-						Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
-					</aside>
-				</section>
+                <section>
+                    <section class="subsection-divider" data-background="#7CCFD9">
+                        <h2>Site Configuration / Architecture</h2>
+                    </section>
+                    <section>
+                        <p>How were pages engineered? Was the approach done in a best practices manner?</p>
+                        <p>Blocks &lt; Context &lt; Panels</p>
+                        <aside class="notes">
+                            <ul>
+                                <li>Block system rendered, then placed.</li>
+                                <li>Block and context gives you tunnel vision.</li>
+                            </ul>
+                        </aside>
+                    </section>
+                    <section>
+                        <p>Is configuration tracked?</p>
+                        <p>Exported to Features/Config Management.</p>
+                    </section>
+                    <section>
+                        <p>Are exported features cohesive? They should be restricted one feature per bundle type, not one single, site-wide feature.</p>
+                        <aside class="notes">Very large features can run into memory/performance problems.</aside>
+                    </section>
+                    <section class="subsection-divider" data-background="#7CCFD9">
+                        <h2>File system</h2>
+                    </section>
+                    <section>
+                        </p>Make sure all files are not stored in the same directory (single directories with a lot of files can slow down a system). File fields should use a token to group it's directories, for example:</p>
 
-				<section>
-					<h2>Export to PDF</h2>
-					<p>Presentations can be <a href="https://github.com/hakimel/reveal.js#pdf-export">exported to PDF</a>, here's an example:</p>
-					<iframe src="//www.slideshare.net/slideshow/embed_code/42840540" width="445" height="355" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:3px solid #666; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe>
-				</section>
+<pre><code data-trim>
+    images/field-name/[year]/[month]
+</code></pre>
+                        <aside class="notes">Also simply for human comprehension.</aside>
+                    </section>
+                    <section>
+                        </P>Sensitive files are placed in a private location.</p>
+                        <aside class="notes">Resumes anyone?</aside>
+                    </section>
+                </section>
 
-				<section>
-					<h2>Global State</h2>
-					<p>
-						Set <code>data-state="something"</code> on a slide and <code>"something"</code>
-						will be added as a class to the document element when the slide is open. This lets you
-						apply broader style changes, like switching the page background.
-					</p>
-				</section>
 
-				<section data-state="customevent">
-					<h2>State Events</h2>
-					<p>
-						Additionally custom events can be triggered on a per slide basis by binding to the <code>data-state</code> name.
-					</p>
-					<pre><code class="javascript" data-trim contenteditable style="font-size: 18px;">
-Reveal.addEventListener( 'customevent', function() {
-	console.log( '"customevent" has fired' );
-} );
-					</code></pre>
-				</section>
+                <section>
+                    <section class="subsection-divider" data-background="#7CCFD9">
+                        <h1>Security Review</h1>
+                        <p>This spans site code/config and the hosting environment.</p>
+                    </section>
+                    <section>
+                        <p>Modules are up to date with security releases.</p>
+                        <p><a href="https://www.drupal.org/security-team/risk-levels">Risk levels defined</a></p>
+                        <aside class="notes">
+                            Determine risk level. Might be decided for you by PCI or FISMA.
+                        </aside>
+                    </section>
+                    <section>
+                        <p>No “PHP fields/Input modes” are used on the site.</p>
+                        <p>This isn't just a security issue. Try indexing solr with a drupal_goto().</p>
+                        <aside class="notes">PHP makes rendering a node behave in unexpected ways</aside>
+                    </section>
+                    <section>
+                        <p>High access input formats are only granted to appropriately vetted users (e.g. full html should be restricted to trusted roles).</p>
+                    </section>
+                    <section>
+                        <p>Anti-spam technology is required for any open user registration.</p>
+                        <ul>
+                            <li>Captcha</li>
+                            <li>Honeypot</li>
+                            <li>Mollom</li>
+                            <li>Community manager</li>
+                        </ul>
+                        <aside class="notes">
+                            <ul>
+                                <li>I've seen databases 90% composed of user spam.</li>
+                                <li>Some legitimate, well-intentioned users just aren't going to provide high quality content.</li>
+                            </ul>
+                        </aside>
+                    </section>
+                    <section>
+                        <p>The hosting environment is up to date.</p>
+                        <p>Hosting Vs. Managed Hosting.</p>
+                        <aside class="notes">
+                            <ul>
+                                <li>Big diff between hosting and managed.</li>
+                                <li>F1 patched ~60 servers against the bash-shock vulnerability within hours.</li>
+                            </ul>
+                        </aside>
+                    </section>
+                    <section>
+                        <p>Any development or staging instances of the site are hidden from unauthorized access/search indexing.</p>
+                        <aside class="notes">Once saw an abandoned dev instance cause the server to be hacked due to un-patched ckeditor</aside>
+                    </section>
+                    <section>
+                        <p>Any unused user ssh or (s)ftp user accounts are discontinued.</p>
+                        <aside class="notes">Not just social engineering, but careless/former staff is an issue.</aside>
+                    </section>
+                    <!-- <section>
+                        <p>Individual users are assigned unique user accounts, No single user profile should be shared with all users. Also, root user should never be directly used.</p>
+                        <aside class="notes">Honestly, Drupal doesn't keep an audit trail of config changes not in VCS. Maybe a good module idea.</aside>
+                    </section> -->
+                    <section>
+                        <p>ssh uses public/private key authentication instead of passwords. At least 2048 bits.</p>
+                    </section>
+                    <section>
+                        <p>General web-server best practices:</p>
+                        <p><a href="http://wiki.nginx.org/Drupal">Nginx</a></p>
+                        <p><a href="http://nadeausoftware.com/articles/2009/05/drupal_and_apache_web_site_security_checklist_part_1">Apache</a></p>
+                        <aside class="notes">Tons of options here, the links provide some good sources.</aside>
+                    </section>
+                </section>
 
-				<section>
-					<h2>Take a Moment</h2>
-					<p>
-						Press B or . on your keyboard to pause the presentation. This is helpful when you're on stage and want to take distracting slides off the screen.
-					</p>
-				</section>
+                <section>
 
-				<section>
-					<h2>Much more</h2>
-					<ul>
-						<li>Right-to-left support</li>
-						<li><a href="https://github.com/hakimel/reveal.js#api">Extensive JavaScript API</a></li>
-						<li><a href="https://github.com/hakimel/reveal.js#auto-sliding">Auto-progression</a></li>
-						<li><a href="https://github.com/hakimel/reveal.js#parallax-background">Parallax backgrounds</a></li>
-						<li><a href="https://github.com/hakimel/reveal.js#keyboard-bindings">Custom keyboard bindings</a></li>
-					</ul>
-				</section>
+                    <section class="subsection-divider" data-background="#7CCFD9">
+                        <h2>Hosting Environment</h2>
+                    </section>
 
-				<section style="text-align: left;">
-					<h1>THE END</h1>
-					<p>
-						- <a href="http://slides.com">Try the online editor</a> <br>
-						- <a href="https://github.com/hakimel/reveal.js">Source code &amp; documentation</a>
-					</p>
-				</section>
+                    <section>
+                        <p>What is the current update status of software packages? (php, mysql, apache). Note PHP 5.3.3 on RHEL 6 systems is vendor supported.</p>
+                    </section>
 
-			</div>
+                    <section>
+                        <p>php memory limits (We normally use 192MB)</p>
+                        <aside class="notes">
+                            <p>This will vary, anything 512 and over would be an indicator of problems in the way the site was engineered.</p>
+                            <p>F1 client ~12 gigs.</p>
+                        </aside>
+                    </section>
+
+                    <section>
+                        <p>If APC is used shm size (~96MB - 128MB)</p>
+                        <p>APC is not a very good general back-end cache for Drupal. Poor fragmentation hits performance.</p>
+                        <aside class="notes">
+                            <p>Size wil vary. Default is never adequate (64MB).</p>
+                            <p>More if APC is back end.</p>
+                            <p>Don't use it as a back end. Especially for page cache.</p>
+                        </aside>
+                    </section>
+
+                </section>
+
+                <section>
+                    <section class="subsection-divider" data-background="#7CCFD9">
+                        <h1>Front End</h1>
+                    </section>
+                    <section>
+                        <p>CSS well architected. Avoid duct tape themes.</p>
+                    </section>
+                    <section>
+                        <p>Overuse of templates?</p>
+                        <p>Display Suite!</p>
+                    </section>
+                    <section>
+                        <p>Business logic in theme layer?</p>
+                        <p>The only if statements should be checking that a variable is set or not empty.</p>
+                    </section>
+                </section>
+
+                <section>
+
+                    <section class="subsection-divider" data-background="#7CCFD9">
+                        <h1>Process</h1>
+                    </section>
+
+                    <section>
+                        <p>Deliverable requirements. What does the client expect from your support?</p>
+                        <aside>Just patching? Strategy? Performing deployments?</aside>
+                    </section>
+
+                    <section>
+                        How will releases be delivered?
+                        <aside class="notes">
+                            <p>As a subcontractor, may not know. But should learn what steps are being taken.</p>
+                            <p>One site I know of, they were just unzipping over the existing installation. Which did not delete/move files.</p>
+                        </aside>
+                    </section>
+
+                    <section>
+                        Deployment requirements
+                    </section>
+
+                </section>
+
+
+                <section>
+                    <section class="subsection-divider" data-background="#7CCFD9">
+                        <h2>Opportunities</h2>
+                        <p>General opportunities for improvements</p>
+                        <p>Upsell your services!</p>
+                    </section>
+                    <section>
+                        <ul>
+                            <li>Analytics</li>
+                            <li>UX/Design</li>
+                            <li>Solr Search</li>
+                        </ul>
+                    </section>
+                </section>
+
+                <section class="title-slide" data-background="#ef4836">
+                    <h1>Thank You!!!</h1>
+                    <aside class="notes">Mention F1 services.</aside>
+                </section>
+
+
+            </div>
 
 		</div>
 
